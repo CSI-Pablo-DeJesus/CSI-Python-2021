@@ -132,22 +132,22 @@ What is a benefit of using Markdown?
 https://www.markdownguide.org/getting-started/
 
  - Answer:
-
+The benefit of using markdown is that its a lightweight portable markup language that you can use to  format text documents.
 What does "cd" stand for?
 
- - Answer:
+ - Answer: change director
 
 Did you get stuck at any point or become confused with your console? (yes/no) If so, what happened? How did you solve it?
 
- - Answer:
+ - Answer: No
 
 Did you consider searching google for other commands to run? What did you try? 
 
- - Answer:
+ - Answer: No i did not, because using mardown seems very convenient.
 
 What would you like to program? 
 
- - Answer:
+ - Answer: Yes, I think it is a big part of the world right now but will be way more important in the future
 
 Type down any class notes below this sentence:
 
