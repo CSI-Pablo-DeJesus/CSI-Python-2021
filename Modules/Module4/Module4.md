@@ -97,7 +97,7 @@ print(f"Or use the print directly {myNumber}")
 * Update it to reflect each meal the user inputs before printing it to the console. 
 *Module2's HelloWorld.py might be a useful reference.*
 
-<br>
+<br> 
 
 ### Example output:
 >What did you have for Breakfast?
@@ -121,7 +121,7 @@ print(f"Or use the print directly {myNumber}")
 * ### Store it within your Module4 directory.
 * ### Commit and push the file before next class.
 
-<br>
+<br> 
 
 
 
@@ -135,20 +135,29 @@ Evaluate the following code. Is the code written correctly? What would be the co
         print('This message has a syntax error!")
         print(Churrigueresco)
 
- - Answer:
+ - Answer: It is not written correctly because it only has a single quotation on one side, while the other has two.
+ print("This message has a syntax error!")
+        print("Churrigueresco")
+
 
 Evaluate the following code. Is the code written correctly? What would be the correct code?
         someNumber=360
-        print(' The Number is someNumber ')
+        print(' The Number is someNumber ')ewf
 Expected:  The Number is 360
 
- - Answer:
+ - Answer: someNumber=360
+        print("The Number is someNumber"+ someNumber)ewf
+Expected:  The Number is 360
 
 Define a function that takes 2 or more string parameters and prints a single line using them as part of a functional string. The function may do anything you chose but the function name and parameter names must be representative of what they are.
 
- - Answer:
+- Answer:
+def party(cool)
+ print(f"the party is (something), it is going to be at {place} )
   
-
+ something=cool
+ place=my house
+ party(something,place)
 
 Refer to this documentation webpage and google for the exercises below:
 https://www.w3schools.com/python/python_ref_string.asp
@@ -159,7 +168,9 @@ Which code returns the length of the string s0:
 
 s0 = "What is my length? Store it as a number in a variable."
 
- - Answer:
+ - Answer: 
+  length=(len(s0))
+  print(length)
 
 How do you create a substring in python?
 Create a substring of s1 containing only my name. Store it in a variable called ss1.
@@ -167,11 +178,11 @@ https://www.freecodecamp.org/news/how-to-substring-a-string-in-python/
 
 s1 = "Hello Student! My name is Carlos Jose Cobián. I enjoy coding and video games!"
 
- - Answer: ss1 =
+ - Answer: ss1 = s1[26.44]
 
 Capitalize every letter of ss1 using a function. Store it in a variable called SS1.
 
- - Answer: SS1 =
+ - Answer: SS1 = ss1.upper()
 
 
 This last section is not worth any points, but is worth looking into. It is good string manipulation practice and contains exercises that you may see in a pop quiz! 
