@@ -47,8 +47,7 @@ computerChoice = random.choice(foo)
 print(f"Computer selected: {computerChoice}")
 
 # Add logic below this line
-```
-  
+``
 <br>
 
 
@@ -71,10 +70,25 @@ print(f"Computer selected: {computerChoice}")
 Give a python example for each logic operator in the module image.
 
  - Answers:
-   - OR:
-   - AND: 
-   - NOT: 
+   - OR: 
+    x=24
 
+    If(x=<30 or x>1) 
+          1       1
+              1
+    
+    - AND:
+      x=24
+
+    If(x=<30 and x>1) 
+           1       1
+               1
+    - NOT: 
+  x=24
+
+    If(x=<30 not x>1) 
+           1       1
+               1
 
 Type down any class notes below this sentence:
 
