@@ -9,6 +9,9 @@ computerChoice = random.choice(foo)
 
 UserChoice=input("Choose between Rock, Paper and Scissors ")
 
+
+print(f"User picked {UserChoice}")
+print(f"Computer picked {computerChoice}")
 if(UserChoice=="Rock" and computerChoice=="Paper"):
   print("youlose")
 elif(UserChoice==computerChoice):
@@ -17,7 +20,7 @@ elif(UserChoice==computerChoice):
 
 
 elif(UserChoice=="Rock" and computerChoice=="Scissors"):
-     print("youwin")
+     print("you win")
 
 
 elif(UserChoice=="Rock" and computerChoice=="Rock"):
@@ -29,13 +32,13 @@ elif(UserChoice=="Paper" and computerChoice=="Paper"):
 
 
 elif(UserChoice=="Paper" and computerChoice=="Scissors"):
-     print("youlose")
+     print("you lose")
 
 
-elif(UserChoice=="Scissors" and computerChoice=="Scissors"):
-     print("youlose")
+elif(UserChoice=="Scisors" and computerChoice=="Scissors"):
+     print("you lose")
 
 
 
 else:
-  print("you lose")
+  print("enter valid value")
