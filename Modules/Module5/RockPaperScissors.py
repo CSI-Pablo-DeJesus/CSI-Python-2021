@@ -7,7 +7,7 @@ import random
 foo = ['Rock', 'Paper', 'Scissors']
 computerChoice = random.choice(foo)
 
-UserChoice=input("Choose between rock, paper and scissors ")
+UserChoice=input("Choose between Rock, Paper and Scissors ")
 
 if(UserChoice=="Rock" and computerChoice=="Paper"):
   print("youlose")
@@ -32,7 +32,7 @@ elif(UserChoice=="Paper" and computerChoice=="Scissors"):
      print("youlose")
 
 
-elif(UserChoice=="Scissiors" and computerChoice=="Scissors"):
+elif(UserChoice=="Scissors" and computerChoice=="Scissors"):
      print("youlose")
 
 
