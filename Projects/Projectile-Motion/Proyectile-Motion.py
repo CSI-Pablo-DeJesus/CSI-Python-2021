@@ -13,7 +13,7 @@ import json
     # Building= "Burj Khalifa"
     # h_m=829.8
     # gravity_ms=9.81
-def ProjectileFunction(experimentData:ExperimentData):
+def ProjectileFunction(ExperimentData:ExperimentData):
     time_s=(math.sqrt(2*h_m/ExperimentData.gravity_ms))
     Deltax_m=(math(ExperimentData.v_ms*time))
     print(f"""Here im calculating the time by replacing the formula with the variables defined previously. But first, I imported the function of the square root.
@@ -31,11 +31,11 @@ def ProjectileFunction(experimentData:ExperimentData):
     # "gravity_ms" : "9.81"
 
 myDataSet = [
-    ExperimentData("Glock18C","9x19" "MAI AP",875,"Burj Khalifa",541.3,3.7) ProjectileFunction(experimentData),
-    ExperimentData("OP-SKS","7-62×39mm "MAI AP",875, "One World Trade Center",530.2,9.81) ProjectileFunction(experimentData),
-    ExperimentData("OP-SKS","7-62×39mm"MAI AP",875, "El Choli",541.3,9.81) ProjectileFunction(experimentData),
-    ExperimentData("Glock 17","7-62×39mm"MAI AP",875, "One World Trade Center",541.3,4.2) ProjectileFunction(experimentData),
-    ExperimentData("Glock18C","7-62×39mm"MAI AP",875, "Lotte World Tower",541.3,9.81) ProjectileFunction(experimentData)]
+    ExperimentData("Glock18C","9x19" "MAI AP",875,"Burj Khalifa",541.3,3.7) ,
+    ExperimentData("OP-SKS","7-62×39mm "MAI AP",875, "One World Trade Center",530.2,9.81) ,
+    ExperimentData("OP-SKS","7-62×39mm"MAI AP",875, "El Choli",541.3,9.81) ,
+    ExperimentData("Glock 17","7-62×39mm"MAI AP",875, "One World Trade Center",541.3,4.2) ,
+    ExperimentData("Glock18C","7-62×39mm"MAI AP",875, "Lotte World Tower",541.3,9.81) ]
 
 experiment(myDataSet[0])
 
@@ -44,7 +44,7 @@ myOutputFilePath = os.path.join(myOutputPath,"ExperimentData,json')
 # Serialization
 # with open (myOutputFilePath,'W') as outfile:
 #json.dump(myDataset[0].dict__ outfile)
-with open (myOutputFilePath,'W') as outfile:
+with open (myOutputFilePath,'w') as outfile:
 json.dump([data._ dict.for data in myDataset], outfile)
 
 
