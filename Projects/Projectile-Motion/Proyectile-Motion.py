@@ -32,20 +32,21 @@ def ProjectileFunction(ExperimentData:ExperimentData):
 
 myDataSet = [
     ExperimentData("Glock18C","9x19" "MAI AP",875,"Burj Khalifa",541.3,3.7) ,
-    ExperimentData("OP-SKS","7-62×39mm "MAI AP",875, "One World Trade Center",530.2,9.81) ,
-    ExperimentData("OP-SKS","7-62×39mm"MAI AP",875, "El Choli",541.3,9.81) ,
-    ExperimentData("Glock 17","7-62×39mm"MAI AP",875, "One World Trade Center",541.3,4.2) ,
-    ExperimentData("Glock18C","7-62×39mm"MAI AP",875, "Lotte World Tower",541.3,9.81) ]
+    ExperimentData("OP-SKS","7-62×39mm ","MAI AP",875, "One World Trade Center",530.2,9.81) ,
+    ExperimentData("OP-SKS","7-62×39mm","MAI AP",875, "El Choli",541.3,9.81) ,
+    ExperimentData("Glock 17","7-62×39mm","MAI AP",875, "One World Trade Center",541.3,4.2) ,
+    ExperimentData("Glock18C","7-62×39mm","MAI AP",875, "Lotte World Tower",541.3,9.81) ]
 
-experiment(myDataSet[0])
+ProjectileFunction(myDataSet[0])
 
-myOutputpath = Path(file) .parents{e}
-myOutputFilePath = os.path.join(myOutputPath,"ExperimentData,json')
+myOutputPath = Path(__file__).parents[0]
+myOutputFilePath = os.path.join(myOutputPath,"ExperimentData,json")
 # Serialization
 # with open (myOutputFilePath,'W') as outfile:
 #json.dump(myDataset[0].dict__ outfile)
+
 with open (myOutputFilePath,'w') as outfile:
-json.dump([data._ dict.for data in myDataset], outfile)
+    json.dump([data.__dict__ for data in myDataSet], outfile)
 
 
 
@@ -55,4 +56,5 @@ deserialize = open (myOutputFilePath,)
 
 experimentJsom = json.load(deserialize)
 
-newList[]
+for e in experimentJson:
+    ExperimentData(e***)
