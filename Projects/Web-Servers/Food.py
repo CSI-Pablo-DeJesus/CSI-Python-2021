@@ -1,3 +1,4 @@
+#assigning a class
 class Food:
     def __init__(self, id:int, uid:str,dish:str,description:str,ingredient:str,measurement:str):
         self.id = id, 
