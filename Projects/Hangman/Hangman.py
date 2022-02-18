@@ -128,7 +128,7 @@ Steps = ["""
 print(Steps[0])
 
 # Start= input
-print(len(food)*" _ ")
+print(len(food.ingredient)*" _ ")
 
 
 def get_input():
@@ -136,9 +136,29 @@ def get_input():
         # ask for input
         Start= input(f"Name a letter for this food: ")
 
+
         # Input validation
         if(len(Start) != 1):
             print("error 101")
             continue
         if():
          return Start
+     
+     
+Incorrect_integers = ["0","1","2","3","4","5","6","7","8","9"]
+Incorrect_characters = ["`","~","!","@","$","%","^","&","*","(",")","-","_","=","+","[","{","]","}","\","|",";",":",",","<",".",">","/","?"]
+ 
+     
+def printword():
+    temp: str=""
+    
+    len(food.ingredient)
+    for letter in food.ingredient : 
+        print(letter)
+        letter in(LettersAttempted)
+        if letter not LettersAttempted : 
+            temp+="_"
+        else:
+            temp+="letter"
+     
+    return temp
