@@ -9,6 +9,16 @@ import string
 from RandomFood import RandomFood
 #import everything necesarry for the code to run such as json, random, urllib ect
 
+
+
+
+     
+#create list with characters not allowed in-game  
+Incorrect_integers = ["0","1","2","3","4","5","6","7","8","9"]
+Incorrect_characters = ["`","~","!","@","$","%","^","&","*","(",")","-","_","=","+","[","{","]","}","\\","|",";",":",",","<",".",">","/","?"]
+
+
+
 # This is discouraged but it will avoid certificate validation (prevents error)
 ssl._create_default_https_context = ssl._create_unverified_context
 
@@ -31,57 +41,52 @@ def getWord():
     req = urllib.request.Request(foodsURL)
     requestData = json.loads(urllib.request.urlopen(req).read())
     #requesting data site which has all the variables available for the game
-    current_food:food = food(**requestData)
-    food:RandomFood = food(**requestData)
+    current_food:RandomFood = RandomFood(**requestData)
     #make array from words in name
-    name =current_food.name.split()
+    name = current_food.dish
 
 
-        #return first word of the name
-    return name[0]
+    #return first word of the name
+    return name
+
+letterinword = getWord()
+
+
+    # x=1 #used to keep track of wrong guesses
 
 
 
-    x=1 #used to keep track of wrong guesses
-
-
-
-print (RandomFood)
+# print (RandomFood)
 #print food ingredient 
 
 def get_input():
    
- while(True):
+    while(True):
         # ask for input
         while(True): 
-            letter = input("Name Letter")
             letter = input("Name Letter").upper()
 
-        # Input validation
+            # Input validation
             if(len(letter) != 1):
-                        print("error 101:only letters are allowed") #print message if charater is not allowed
-                        continue
-            if():
-                    return letter
+                print("error 101:only letters are allowed") #print message if charater is not allowed
+                continue
+            if letter in letterinword:
+                return letter
                 
-            if((letter)in Incorrect_characters or Incorrect_integers):
-                    print("error 101:incorrect letter or character")
-                    continue
-            if():
-                        return letter
-           # the past lines used length to find if player used only one letter and used if else logic to make sure the player does not repear used letters or incorrect/unavaileble letters)
+            if( letter in Incorrect_characters or letter in Incorrect_integers):
+                print("error 101:incorrect letter or character")
+                continue
+
+            return letter
+            # the past lines used length to find if player used only one letter and used if else logic to make sure the player does not repear used letters or incorrect/unavaileble letters)
            
  
  
-     
-   #create list with characters not allowed in-game  
-Incorrect_integers = ["0","1","2","3","4","5","6","7","8","9"]
-Incorrect_characters = ["`","~","!","@","$","%","^","&","*","(",")","-","_","=","+","[","{","]","}","\\","|",";",":",",","<",".",">","/","?"]
 
 def printWord(word):
     
    
-    letter = list(string.ascii_lowercase)
+    letter = list(string.ascii_lowercase())
     #grab all the lowercase letter in ascii instead of putting them all in a list(- credits to Hermann Bauer and prof Carlos Cobian for this line)
     lettersinword = list(word)
     attemptedletters = [] #array of attempted letters
@@ -109,33 +114,19 @@ def printWord(word):
 
  
         
-def get_steps(): 
-    def a(getInput):
-          def a(getWord): #grabing variables from other functions to use in this one
-    
-             for letter in lettersinword: #I tried to grab the function in which this en the variable in the net lime come from but  it would still report a problem
-                 if(letter in attemptedletters):
-                  steps = steps[0]
-                 else: 
-                     steps = steps[steps_int_variable+1]
-                     steps_int_variable = 0
-    return steps 
-    
-    
-    while True:
+def get_steps(lettersinword, attemptedletters, steps): 
+ #grabing variables from other functions to use in this one
+    for letter in lettersinword: #I tried to grab the function in which this en the variable in the net lime come from but  it would still report a problem
+        if(letter in attemptedletters):
+          steps = steps[0]
+        else: 
+            steps = steps[steps_int_variable+1]
+            steps_int_variable = 0
+            return steps   
+    while  True:
         print(steps[0])
        
-        
-
-
-        
     
-       
-        
-        
-
-
-
 
 
 #create steps based on characters(be original)
@@ -247,6 +238,25 @@ steps = ["""
 print(steps[0])
 
 # Start= input
-print(len(RandomFood)*" _ ")
+letterinword = getWord()
+print(len(letterinword)*" _ ")
 
-
+def play(letterinword):
+    myWord = letterinword().upper()
+    steps = 0 
+    while True:
+        #the last lines I created a function and god word and grabbed steps to restart game 
+        print (steps[steps])
+        print(printWord(myWord))
+        letter = get_input ().upper() 
+        if letter not in letterinword:
+            try:
+                steps = steps + 1
+            except:
+                print("GG U LOST HAHAHAHA")     
+                break   
+get_steps()
+printWord()
+tempFormat()
+getWord()
+get_input()
